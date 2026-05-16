@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>ShopX | Premium Tech Store</title>
+
+  
+  <link rel="stylesheet" href="./css/style.css" />
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+</head>
+
+<body>
+
+  
+  <button class="back-to-top" id="backToTop">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  
+  <header class="navbar" id="navbar">
+
+    <div class="nav-left">
+      <div class="logo">
+        <h2>ShopX</h2>
+      </div>
+    </div>
+
+    <nav class="nav-center nav-menu" id="navMenu">
+      <ul class="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#productGrid">Products</a></li>
+        
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="orders.html">Orders</a></li>
+        <li><a href="admin.html" id="adminLink" style="display:none;">Admin</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-right">
+      <div class="search-box">
+        <i class="fas fa-search"></i>
+        <input type="text" id="searchInput" placeholder="Search premium products..." />
+      </div>
+
+      <div class="nav-icons">
+        <button class="theme-btn" id="themeBtn">
+          <i class="fas fa-moon"></i>
+        </button>
+
+        <button class="wishlist-btn" onclick="openWishlist()">
+          <i class="fas fa-heart"></i>
+          <span class="wishlist-count">0</span>
+        </button>
+
+        <div class="icon cart-icon">
+          <i class="fas fa-shopping-cart"></i>
+          <span class="cart-count"></span>
+        </div>
+
+        <div class="auth-section">
+          <div class="auth-buttons" id="authButtons">
+            <button id="loginBtn">Login</button>
+            <button id="registerBtn">Register</button>
+          </div>
+
+          <div class="user-menu" id="userMenu">
+            <button id="userBtn">
+              <i class="fas fa-user"></i>
+              Account
+            </button>
+            <div class="dropdown">
+              <button id="logoutBtn">Logout</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="hamburger" id="hamburger">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+
+  </header>
+
+  
+  <div class="cart-sidebar" id="cartSidebar">
+
+    
+    <div class="cart-header">
+
+      <h2>Your Cart</h2>
+
+      <button id="closeCart">
+        <i class="fas fa-times"></i>
+      </button>
+
+    </div>
+
+    
+    <div class="cart-items" id="cartItems">
+
+    </div>
+
+    
+    <div class="cart-footer">
+
+      <h3>
+        Total:
+        <span id="cartTotal">
+          ₹0
+        </span>
+      </h3>
+
+      <button class="checkout-btn" onclick="startCheckout()">
+        Proceed To Checkout
+      </button>
+
+    </div>
+
+  </div>
+  
+  <div class="overlay" id="overlay"></div>
+
+  
+  <div class="auth-modal" id="authModal">
+
+    <div class="auth-box">
+
+      <button class="close-auth" id="closeAuth">
+        <i class="fas fa-times"></i>
+      </button>
+
+      <h2 id="authTitle">
+        Login
+      </h2>
+
+      <form id="authForm">
+
+        <input type="text" id="name" placeholder="Full Name" />
+
+        <input type="email" id="email" placeholder="Email" required />
+
+        <input type="password" id="password" placeholder="Password" required />
+
+        <button type="submit">
+          Continue
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+  
+  <section class="hero" id="hero">
+
+    
+    <div class="hero-glow"></div>
+
+    <div class="hero-content">
+
+      <p class="hero-subtitle">
+        FUTURE OF E-COMMERCE
+      </p>
+
+      <h1>
+        Premium Tech.<br>
+        Premium Lifestyle.
+      </h1>
+
+      <p class="hero-text">
+        Experience futuristic shopping with modern gadgets,
+        premium accessories and unbeatable style.
+      </p>
+
+      <div class="hero-buttons">
+
+        <button class="primary-btn" href="#productGrid">
+          Shop Now
+        </button>
+
+        <button class="secondary-btn">
+          Explore
+        </button>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  
+  <section class="products" id="products">
+
+    <div class="section-header">
+
+      <h2>
+        Trending Products
+      </h2>
+
+      <p>
+        Explore futuristic gadgets & premium products
+      </p>
+
+    </div>
+
+    
+
+    <div class="products-layout" id="catogery">
+
+      
+      <div class="filter-sidebar">
+
+        <h3>Categories</h3>
+
+        <button class="category-btn active-category" data-category="All">
+          All
+        </button>
+
+        <button class="category-btn" data-category="Mobile">
+          Mobile
+        </button>
+
+        <button class="category-btn" data-category="Laptop">
+          Laptop
+        </button>
+
+        <button class="category-btn" data-category="Gaming">
+          Gaming
+        </button>
+
+        <button class="category-btn" data-category="Accessories">
+          Accessories
+        </button>
+      </div>
+
+      
+      <div class="product-grid" id="productGrid"></div>
+
+    </div>
+  </section>
+
+  
+  <div class="toast" id="toast">
+
+    Product Added To Cart
+
+  </div>
+
+  
+  <footer class="footer" id="contact">
+
+    <h2>ShopX</h2>
+
+    <p>
+      Premium futuristic e-commerce experience.
+    </p>
+
+    <div class="social-icons">
+
+      <i class="fab fa-facebook-f"></i>
+
+      <i class="fab fa-instagram"></i>
+
+      <i class="fab fa-twitter"></i>
+
+      <i class="fab fa-linkedin-in"></i>
+
+    </div>
+
+    <p class="copyright">
+      © 2026 ShopX. All rights reserved.
+    </p>
+
+  </footer>
+
+  
+  <div class="quick-view-modal" id="quickViewModal">
+
+    <div class="quick-view-content">
+
+      <span class="close-quick-view" id="closeQuickView">
+        &times;
+      </span>
+
+      <div id="quickViewData"></div>
+
+    </div>
+
+  </div>
+
+  
+  <div class="wishlist-sidebar" id="wishlistSidebar">
+
+    <div class="wishlist-header">
+
+      <h2>Wishlist</h2>
+
+      <button id="closeWishlist">
+        ✕
+      </button>
+
+    </div>
+
+    <div id="wishlistItems">
+    </div>
+
+  </div>
+  <script src="./js/app.js"></script>
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+</body>
+
+</html>

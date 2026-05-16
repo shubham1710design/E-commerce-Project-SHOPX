@@ -1,0 +1,17 @@
+# ignore node_modules
+node_modules/
+
+# ignore .env files
+.env
+
+# ignore build files
+build/  
+
+# ignore log files
+*.log
+# ignore database files
+*.db        
+# ignore coverage reports
+coverage/
+
+    

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <div class="admin-container">
+
+        <h1>
+            Admin Dashboard
+        </h1>
+        <div class="add-product-form">
+
+            <h2>
+                Add Product
+            </h2>
+            <input type="hidden" id="productId">
+            <input type="text" id="productTitle" placeholder="Product Title">
+
+            <input type="text" id="productImage" placeholder="Image URL">
+
+            <input type="number" id="productPrice" placeholder="Price">
+
+            <input type="text" id="productCategory" placeholder="Category">
+
+            <textarea id="productDescription" placeholder="Description"></textarea>
+
+            <button onclick="addProduct()">
+                Add Product
+            </button>
+
+        </div>
+        <div id="adminProducts">
+
+        </div>
+
+    </div>
+    <div id="toast"></div>
+    <script src="./js/app.js"></script>
+
+</body>
+
+</html>
