@@ -1530,7 +1530,7 @@ async function startCheckout() {
 
         const options = {
 
-            key: "rzp_test_Sna3JYKDNoy3cp",
+            key: "rzp_test_SqRJnqYbTOzQ8O",
 
             amount: data.amount,
 
