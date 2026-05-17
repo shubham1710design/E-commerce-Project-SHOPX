@@ -82,7 +82,6 @@ RAZORPAY_KEY_SECRET=your_secret
 
 ## Screenshots
 
-(Add homepage, cart, admin dashboard screenshots here)
 
 ---
 
