@@ -72,16 +72,37 @@ Open frontend/index.html using Live Server
 
 Create a .env file inside backend:
 
-PORT=5000
-MONGO_URI=your_mongodb_uri
-JWT_SECRET=your_secret
-RAZORPAY_KEY_ID=your_key
+PORT=5000 //
+MONGO_URI=your_mongodb_uri  //
+JWT_SECRET=your_secret  //
+RAZORPAY_KEY_ID=your_key  //
 RAZORPAY_KEY_SECRET=your_secret
 
 ---
 
 ## Screenshots
+# Screenshots
 
+## Homepage
+![Home](screenshots/home.png)
+
+## Categeory
+![Catagory](screenshots/catageory.png)
+
+## Cart
+![Cart](screenshots/cart.png)
+
+## Product
+![Product](screenshots/product.png)
+
+## Admin Dashboard
+![Admin](screenshots/admin.png)
+
+## Wishlist
+![Wishlist](screenshots/wishlist.png)
+
+## Checkout
+![Checkout](screenshots/payment.png)
 
 ---
 
