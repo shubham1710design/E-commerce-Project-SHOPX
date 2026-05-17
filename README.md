@@ -80,7 +80,6 @@ RAZORPAY_KEY_SECRET=your_secret
 
 ---
 
-## Screenshots
 # Screenshots
 
 ## Homepage
